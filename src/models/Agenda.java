@@ -6,8 +6,8 @@ import java.util.Optional;
 
 public class Agenda {
 
-    private List<Contact> contacts;
-    private int maxQuantity;
+    private final List<Contact> contacts;
+    private final int maxQuantity;
 
     public Agenda(int quantity) {
         this.maxQuantity = quantity;
@@ -47,14 +47,30 @@ public class Agenda {
     }
 
     public void eliminarContacto(String nombre, String apellido){
-        if (buscarContacto(nombre,apellido).isPresent()){
-//            contacts.stream().filter()
+        contacts.removeIf(c-> c.getName().equalsIgnoreCase(nombre) && c.getLastname().equalsIgnoreCase(apellido));
+    }
+
+    public void modificarTelefono(String nombre, String apellido, String telefono){
+        Optional<Contact> contact = buscarContacto(nombre,apellido);
+        if (contact.isPresent()){
+            Contact c = contact.get();
+            c.setPhone(telefono);
+        }else{
+            System.out.println("no existe el contacto");
         }
     }
 
+    // Ver si la agenda está llena
+    public boolean agendaLlena() {
+        return contacts.size() >= maxQuantity;
+    }
+
+    // Espacios libres
+    public int espaciosLibres() {
+        return maxQuantity - contacts.size();
+    }
 
 
-
-
-
+    public void modificarTelefono(Agenda agenda) {
+    }
 }
