@@ -23,3 +23,54 @@ La agenda permite **gestionar contactos** (nombre, apellido y teléfono) con val
 ---
 
 ## 🗂️ Estructura del proyecto
+agenda-telefonica/
+├─ src/
+│ └─ com/
+│ └─ agenda/
+│ ├─ model/
+│ │ └─ Contacto.java
+│ ├─ core/
+│ │ └─ Agenda.java
+│ └─ App.java
+└─ README.md
+java -cp out com.agenda.App
+
+2. Ejecutar
+   java -cp out com.agenda.App
+
+📖 Uso
+
+Al iniciar, la aplicación preguntará si deseas crear la agenda:
+
+Con capacidad por defecto (10).
+
+Con capacidad personalizada.
+
+Luego aparecerá el menú:
+1. Añadir contacto
+2. Verificar si existe un contacto
+3. Listar contactos
+4. Buscar contacto y mostrar teléfono
+5. Eliminar contacto
+6. Modificar teléfono de un contacto
+7. ¿Agenda llena?
+8. Espacios libres
+0. Salir
+
+🎯 Criterios de Evaluación
+
+Este proyecto cumple con:
+
+Definición de contacto (nombre, apellido, teléfono).
+
+Igualdad de contactos por nombre + apellido.
+
+Agenda creada con capacidad definida o por defecto (10).
+
+Menú por consola para probar todas las funcionalidades.
+
+Buenas prácticas en Java: camelCase, OOP, equals/hashCode, colecciones, validaciones.
+
+👩‍💻 Autores: Andres Cuervo, Sergio Andres Mesa, Juan Daniel Gonzalez, Alexandra Lamadrid
+  
+📅 *Hackatón – 03/09/2025
