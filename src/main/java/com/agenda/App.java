@@ -31,7 +31,6 @@ public class App {
         } while (opcion != 0);
     }
 
-    // --- Métodos auxiliares ---
     private static Agenda crearAgenda() {
         String respuesta = JOptionPane.showInputDialog("¿Desea crear la agenda con tamaño personalizado? (s/n): ");
         if (respuesta != null && respuesta.equalsIgnoreCase("s")) {
